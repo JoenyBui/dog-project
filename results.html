@@ -16239,7 +16239,7 @@ test_{network} = bottleneck_features['test']</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I use transfer layer from Resnet50 as the base, and add GlobalAveragePooling and Dense to output the results.</p>
+<p>I used a transfer layer from the Resnet50 as the base layer and added a GlobalAveragePooling to normalize and a Dense to output the results.  Resnet50 is a great choice because it was trained by the team at Microsoft and it surpassed current algorithm on the imagenet dataset.  Unlike my CNN version from scratch, the Resnet50 has a very deep architecture and is trained from the imagenet dataset (~1.2 million training image).  Adding a GlobalAveragePooling helps prevent the overfitting.</p>
 
 </div>
 </div>
