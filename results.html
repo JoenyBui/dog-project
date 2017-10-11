@@ -15596,6 +15596,7 @@ RK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Since I needed to keep the model running just within my laptop - I used the recommended setup to keep my parameter array reasonable.  The model run uses three Convolution layer sandwich between max-pooling layer.</p>
+<p>Each convolution layer is able find different edge features and each layer reduced the layer.  The max pooling layer helps down-sample its dimensionality.  Adding a GlobalAveragePooling layer to minimize overfitting.</p>
 
 </div>
 </div>
@@ -20618,8 +20619,9 @@ QmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I outputted 2 human pictures and 4 dog pictures.  It's worked really well at guessing if it's people or is it dogs.  It's about 50/50 on the breed given the dogs.</p>
-<p>To improve my model, I can try to use some dropout layer, change the stride, and increase the kernel size.</p>
+<p>The Resnet50 was great, so when I used the transfer layer I didn't need any additional convolutional layer to meet the minimum, but adding a convolutional layer extract more features.  Both the stride and kernel size will help reduce the domain.</p>
+<p>Adding a dropout layer helps with overfitting.</p>
+<p>I outputted 2 human pictures and 4 dog pictures.  It's worked really well at guessing if it's people or is it dogs.</p>
 
 </div>
 </div>
@@ -20640,6 +20642,16 @@ QmCC
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Picture-1">Picture 1<a class="anchor-link" href="#Picture-1">&#182;</a></h3><p>The model predicted the eskimo dog.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -22569,6 +22581,16 @@ YcSU9U1vVAAAAABJRU5ErkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Picture-2">Picture 2<a class="anchor-link" href="#Picture-2">&#182;</a></h3><p>The model predicted the entlebucher mountain dog correctly.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
@@ -23934,6 +23956,16 @@ AAAASUVORK5CYII=
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Picture-3">Picture 3<a class="anchor-link" href="#Picture-3">&#182;</a></h3><p>The model accurately predicted it's a person.  The choice of black russian terrier seems fairly off.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[42]:</div>
@@ -25229,6 +25261,16 @@ AU+6nhhv9/gAAAAASUVORK5CYII=
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Picture-4">Picture 4<a class="anchor-link" href="#Picture-4">&#182;</a></h3><p>The model predicted the pomeranian correctly.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[43]:</div>
@@ -26156,6 +26198,16 @@ RK5CYII=
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Picture-5">Picture 5<a class="anchor-link" href="#Picture-5">&#182;</a></h3><p>The model predicted the human correctly.  The american foxhound seems to have a similar shade.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -27374,6 +27426,16 @@ RK5CYII=
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Picture-6">Picture 6<a class="anchor-link" href="#Picture-6">&#182;</a></h3><p>The model predicted dog correctly, and even though this dog is not a boxer - it has very similar features.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
